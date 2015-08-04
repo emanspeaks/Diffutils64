@@ -1,0 +1,23 @@
+diff -ur diffutils-3.3/src/sdiff.c diffutils-3.3-mingw64/src/sdiff.c
+--- diffutils-3.3/src/sdiff.c	2013-02-02 12:39:05.000000000 +0800
++++ diffutils-3.3-mingw64/src/sdiff.c	2013-04-01 00:00:00.000000000 +0800
+@@ -805,7 +805,7 @@
+ 
+       /* Yield an exit status indicating that a signal was received.  */
+       untrapsig (s);
+-      kill (getpid (), s);
++      raise (s);
+ 
+       /* That didn't work, so exit with error status.  */
+       exit (EXIT_TROUBLE);
+diff -ur diffutils-3.3/src/system.h diffutils-3.3-mingw64/src/system.h
+--- diffutils-3.3/src/system.h	2013-02-02 12:39:05.000000000 +0800
++++ diffutils-3.3-mingw64/src/system.h	2013-04-01 00:00:00.000000000 +0800
+@@ -132,7 +132,6 @@
+ #define LIN_MAX PTRDIFF_MAX
+ verify (TYPE_SIGNED (lin));
+ verify (sizeof (ptrdiff_t) <= sizeof (lin));
+-verify (sizeof (lin) <= sizeof (long int));
+ 
+ /* This section contains POSIX-compliant defaults for macros
+    that are meant to be overridden by hand in config.h as needed.  */
