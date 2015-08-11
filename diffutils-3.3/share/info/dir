@@ -16,8 +16,8 @@ File: dir,	Node: Top	This is the top of the INFO tree
 
 Individual utilities
 * cmp: (diffutils)Invoking cmp.                 Compare 2 files byte by byte.
-* diff3: (diffutils)Invoking diff3.             Compare 3 files line by line.
 * diff: (diffutils)Invoking diff.               Compare 2 files line by line.
+* diff3: (diffutils)Invoking diff3.             Compare 3 files line by line.
 * patch: (diffutils)Invoking patch.             Apply a patch to a file.
 * sdiff: (diffutils)Invoking sdiff.             Merge 2 files side-by-side.
 
