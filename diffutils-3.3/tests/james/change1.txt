@@ -1,0 +1,5 @@
+Test file.
+
+Change 1 should add to this line: text added.
+
+Change 2 should add to this line:
